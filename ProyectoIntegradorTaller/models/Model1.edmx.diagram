@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="6586847d332d4684a158d1dfa8d46956" Name="Diagram1">
+        <EntityTypeShape EntityType="classroom_managerModel.aula" Width="1.5" PointX="0.5" PointY="4.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="classroom_managerModel.equipamiento" Width="1.5" PointX="2.625" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="classroom_managerModel.horas" Width="1.5" PointX="1.25" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="classroom_managerModel.reserva" Width="1.5" PointX="4" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="classroom_managerModel.tipoUsuario" Width="1.5" PointX="7.125" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="classroom_managerModel.usuario" Width="1.5" PointX="6.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="classroom_managerModel.FK__reserva__id_aula__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="classroom_managerModel.FK__reserva__id_hora__52593CB8" ManuallyRouted="false" />
+        <AssociationConnector Association="classroom_managerModel.FK__reserva__id_usua__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="classroom_managerModel.FK__usuario__id_tipo__3A81B327" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="classroom_managerModel.dias_semana" Width="1.5" PointX="6.125" PointY="5.5" />
+        <AssociationConnector Association="classroom_managerModel.FK__reserva__id_dia__5AEE82B9" />
+        <EntityTypeShape EntityType="classroom_managerModel.materias" Width="1.5" PointX="4.75" PointY="6.375" />
+        <AssociationConnector Association="classroom_managerModel.FK__reserva__id_mate__5FB337D6" />
+        <EntityTypeShape EntityType="classroom_managerModel.ubicacion" Width="1.5" PointX="0.875" PointY="2.25" />
+        <AssociationConnector Association="classroom_managerModel.FK__aula__id_ubicaci__628FA481" />
+        <AssociationConnector Association="classroom_managerModel.FK__aula__id_ubicaci__6383C8BA" />
+        <EntityTypeShape EntityType="classroom_managerModel.aula_equipamiento" Width="1.5" PointX="2.875" PointY="7.75" />
+        <AssociationConnector Association="classroom_managerModel.fk_aula" />
+        <AssociationConnector Association="classroom_managerModel.fk_equipamiento" />
+        <EntityTypeShape EntityType="classroom_managerModel.tipoSala" Width="1.5" PointX="8.625" PointY="1.375" />
+        <AssociationConnector Association="classroom_managerModel.FK__aula__id_tipo__6C190EBB" />
+        <EntityTypeShape EntityType="classroom_managerModel.Periodo" Width="1.5" PointX="8.375" PointY="6.75" />
+        <AssociationConnector Association="classroom_managerModel.reserva_FK_id_periodo" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

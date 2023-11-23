@@ -1,0 +1,551 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{15D086E4-894C-4C41-9A04-46F11CCA5067}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ProyectoIntegradorTaller</RootNamespace>
+    <AssemblyName>ProyectoIntegradorTaller</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="classroom_managerDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>classroom_managerDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="logica\Encript.cs" />
+    <Compile Include="logica\LogicaAdministrarDB.cs" />
+    <Compile Include="logica\LogicaMaterias.cs" />
+    <Compile Include="logica\LogicaLugares.cs" />
+    <Compile Include="logica\LogicaPeriodo.cs" />
+    <Compile Include="logica\LogicaReserva.cs" />
+    <Compile Include="logica\ReporteLogica.cs" />
+    <Compile Include="logica\Session.cs" />
+    <Compile Include="logica\LogicaClase.cs" />
+    <Compile Include="logica\LogicaUsuarios.cs" />
+    <Compile Include="models\aula.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\aula_equipamiento.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\dias_semana.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\equipamiento.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\horas.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\materias.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="models\Periodo.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\reserva.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\tipoSala.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\tipoUsuario.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\ubicacion.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="models\usuario.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\admin\AdministracionDatabase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\AdministracionDatabase.Designer.cs">
+      <DependentUpon>AdministracionDatabase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\Periodos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\Periodos.Designer.cs">
+      <DependentUpon>Periodos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\menuAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\menuAdmin.Designer.cs">
+      <DependentUpon>menuAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\editarPeriodo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\editarPeriodo.Designer.cs">
+      <DependentUpon>editarPeriodo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\bedel\CrearProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\bedel\CrearProfesor.Designer.cs">
+      <DependentUpon>CrearProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\CrearUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\CrearUsuario.Designer.cs">
+      <DependentUpon>CrearUsuario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\Lugares.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\Lugares.Designer.cs">
+      <DependentUpon>Lugares.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\bedel\ReservasPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\bedel\HomeProfesor.Designer.cs">
+      <DependentUpon>ReservasPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\bedel\Profesores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\bedel\Profesores.Designer.cs">
+      <DependentUpon>Profesores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\Usuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\Usuarios.Designer.cs">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\components\BotonPersonalisado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\components\ComboBoxPersonalisado.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\components\DraggingControl.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\components\DraggingControl.Designer.cs">
+      <DependentUpon>DraggingControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\components\FormPersonalisado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\components\FormPersonalisado.Designer.cs">
+      <DependentUpon>FormPersonalisado.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\components\RJTextBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="views\components\RJTextBox.Designer.cs" />
+    <Compile Include="views\components\TimePickerPersonalisado.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="views\admin\Materias.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\Materias.Designer.cs">
+      <DependentUpon>Materias.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\CrearAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\CrearAula.designer.cs">
+      <DependentUpon>CrearAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Datos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Datos.Designer.cs">
+      <DependentUpon>Datos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\LogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\LogIn.Designer.cs">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\bedel\BedelMenu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\bedel\BedelMenu.Designer.cs">
+      <DependentUpon>BedelMenu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\profesor\misPendientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\profesor\misPendientes.Designer.cs">
+      <DependentUpon>misPendientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\profesor\HomeProfesor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\profesor\HomeProfesor.Designer.cs">
+      <DependentUpon>HomeProfesor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\profesor\MisReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\profesor\MisReservas.Designer.cs">
+      <DependentUpon>MisReservas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\ImprimirReporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\ImprimirReporte.designer.cs">
+      <DependentUpon>ImprimirReporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\admin\Reporte.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\admin\Reporte.designer.cs">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\ReservarAula.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ReservarAula.Designer.cs">
+      <DependentUpon>ReservarAula.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\VerReservas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\VerReservas.Designer.cs">
+      <DependentUpon>VerReservas.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="views\admin\AdministracionDatabase.resx">
+      <DependentUpon>AdministracionDatabase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\admin\Periodos.resx">
+      <DependentUpon>Periodos.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\admin\menuAdmin.resx">
+      <DependentUpon>menuAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\admin\editarPeriodo.resx">
+      <DependentUpon>editarPeriodo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\bedel\CrearProfesor.resx">
+      <DependentUpon>CrearProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\admin\CrearUsuario.resx">
+      <DependentUpon>CrearUsuario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\admin\Lugares.resx">
+      <DependentUpon>Lugares.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\bedel\Profesores.resx">
+      <DependentUpon>Profesores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\bedel\ReservasPendientes.resx">
+      <DependentUpon>ReservasPendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\admin\Usuarios.resx">
+      <DependentUpon>Usuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\components\RJTextBox.resx" />
+    <EmbeddedResource Include="views\admin\Materias.resx">
+      <DependentUpon>Materias.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\admin\CrearAula.resx">
+      <DependentUpon>CrearAula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Datos.resx">
+      <DependentUpon>Datos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\LogIn.resx">
+      <DependentUpon>LogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\bedel\BedelMenu.resx">
+      <DependentUpon>BedelMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\profesor\misPendientes.resx">
+      <DependentUpon>misPendientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\profesor\HomeProfesor.resx">
+      <DependentUpon>HomeProfesor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\profesor\MisReservas.resx">
+      <DependentUpon>MisReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\admin\ImprimirReporte.resx">
+      <DependentUpon>ImprimirReporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\admin\Reporte.resx">
+      <DependentUpon>Reporte.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ReservarAula.resx">
+      <DependentUpon>ReservarAula.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\VerReservas.resx">
+      <DependentUpon>VerReservas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EntityDeploy Include="models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="classroom_managerDataSet.xsc">
+      <DependentUpon>classroom_managerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="classroom_managerDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>classroom_managerDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="classroom_managerDataSet.xss">
+      <DependentUpon>classroom_managerDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\DataSources\CrearMateria.datasource" />
+    <None Include="Properties\DataSources\ProyectoIntegrador.formularios.ItemProfesor.datasource" />
+    <None Include="Properties\DataSources\ProyectoIntegradorTaller.formularios.Item.datasource" />
+    <None Include="Properties\DataSources\ProyectoIntegradorTaller.formularios.ItemMaterias.datasource" />
+    <None Include="Properties\DataSources\ProyectoIntegradorTaller.formularios.ItemReservas.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Event.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Group.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-bursts-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-full-screen-24 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-minus-24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Location.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Time.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transistor-black-letter-x-1 %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\transistor-black-letter-x-1 %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add_person.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarWhite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\calendarDark.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\add1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\search_white.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\room.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_groups.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\book.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\badge.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\disable_off.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\arrow_back_FILL0_wght400_GRAD0_opsz24.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\path30.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cuenta.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\salir.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
+    <None Include="Resources\database1.png" />
+    <None Include="Resources\export.png" />
+    <None Include="Resources\folder.png" />
+    <None Include="Resources\delete.png" />
+    <None Include="Resources\database.png" />
+    <None Include="Resources\map.png" />
+    <None Include="Resources\alert.png" />
+    <None Include="Resources\pending.png" />
+    <None Include="Resources\resource.png" />
+    <None Include="Resources\history.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
